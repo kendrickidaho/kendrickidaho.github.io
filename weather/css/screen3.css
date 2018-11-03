@@ -66,8 +66,8 @@ nav ul li {
   }
 
   /* 4. Large screen rules */
-  @media Screen and (min-width: 750px){
-      /* All large screen css rules go here */
+  /*@media Screen and (min-width: 750px){
+       All large screen css rules go here 
 
-  }
+  }*/
 
