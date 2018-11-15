@@ -1,7 +1,10 @@
 // Weather site JavaScript functions 
 console.log('My javascript is being read.');
 
-
+// Variables for Function Use
+const temp = 31;
+const speed = 5;
+buildWC(speed, temp);
 
 
 
