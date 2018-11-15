@@ -76,8 +76,4 @@ header{
 header>img{
     width: 5vw
 }
-#time {
-    white-space: nowrap;
-    overflow: scroll;
-}
   }
