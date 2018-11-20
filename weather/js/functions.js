@@ -5,11 +5,12 @@ console.log('My javascript is being read.');
 const temp = 31;
 const speed = 5;
 buildWC(speed, temp);
-const direction = "NNE"; //Set your own value
+const direction = "E"; //Set your own value
 windDial(direction);
 
 
-
+const currentWeather = getcondition("precipitation");
+console.log(currentWeather);
 
 
  // Calculate the Windchill
@@ -31,7 +32,6 @@ windDial(direction);
     // wc = 'Feels like '+wc+'°F';
     feelTemp.innerHTML = wc;
     }
-    <div id="dial" class="w"></div>
 
     // Wind Dial Function
 function windDial(direction){
@@ -78,7 +78,23 @@ function windDial(direction){
      break;
    }
   }
-
+function getcondition(weather){
+   if(weather == "sunny" || weather == "clear"){
+      return "clear";
+   }
+   else if (weather == "rain" || weather == "precipitation") {
+      return "rain";
+   }
+   else if(weather == "blizzard" || weather == "freezing") {
+      return "snow"
+   }
+   else if (weather == "overcast"|| weather == "dreary"){
+      return "clouds"
+   }
+   else if (weather == "Dense"|| weather =="Hazy"){
+      return "fog";
+   }
+}
 
 
 
