@@ -34,6 +34,7 @@ body{
     display: flex; 
     flex-direction: row;
     height: 100%;
+    justify-content: center;
 }
    
    
@@ -102,6 +103,7 @@ body{
     display: flex; 
     flex-direction: row-reverse;
     height: 100%;
+    justify-content: center;
 }
    
 
