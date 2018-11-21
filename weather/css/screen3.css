@@ -25,6 +25,19 @@ body{
     font-family: helvetica, Verdana,  sans-serif;
     font-size: 20px
 }
+.title{
+    background-color: rgba(red, green, blue, alpha);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
+}
+.title{
+    display: flex; 
+    flex-direction: row;
+}
+   
+   
 #dial {
     height: 150px;
     width: 150px;
@@ -60,16 +73,7 @@ body{
    #curWeather {
     background-size: cover;
    }
-.title{
-    background-color: rgba(red, green, blue, alpha);
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    text-align: center;
-    display: flex; 
-    flex-direction: row;
-}
-   
+
    /* Background pictures for summary */
    .clear {
     background-image: url("/weather/images/Optimized/clear-small.jpg");
@@ -96,9 +100,12 @@ body{
     border: 1px solid;
     border-radius: 15px;
     text-align: center;
+}
+.title{
     display: flex; 
     flex-direction: row;
 }
+   
 
 nav ul li { 
     display: inline-block; 
