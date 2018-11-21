@@ -35,6 +35,7 @@ body{
     flex-direction: row;
     height: 100%;
     justify-content: start;
+    flex-flow: row nowrap;
 }
    
    
@@ -104,6 +105,8 @@ body{
     flex-direction: row-reverse;
     height: 100%;
     justify-content: start;
+    flex-flow: row nowrap;
+
 }
    
 
