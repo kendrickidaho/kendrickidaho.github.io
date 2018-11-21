@@ -87,6 +87,8 @@ body{
     border: 1px solid;
     border-radius: 15px;
     text-align: center;
+    display: flex; 
+    flex-direction: row;
 }
 
 nav ul li { 
