@@ -134,15 +134,6 @@ header>img{
     overflow: scroll;
 }
   }
-.title{
-    background-color: rgba(red, green, blue, alpha);
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    text-align: center;
-    display: flex; 
-    flex-direction: row;
-}
      /* Background pictures for summary */
      .clear {
         background-image: url("/weather/images/Optimized/clear-large.jpg");
