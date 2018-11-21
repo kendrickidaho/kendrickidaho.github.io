@@ -33,6 +33,7 @@ body{
     text-align: center;
     display: flex; 
     flex-direction: row;
+    height: 100%;
 }
    
    
@@ -100,6 +101,7 @@ body{
     text-align: center;
     display: flex; 
     flex-direction: row-reverse;
+    height: 100%;
 }
    
 
