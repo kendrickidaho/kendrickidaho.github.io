@@ -52,7 +52,7 @@ function getCode(LOCALE) {
   } // end getCode function
   // Get Current Weather data from API
 function getWeather(locData) {
-    const API_KEY = 'Your Key Goes Here';
+    const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs    ';
     const CITY_CODE = locData['key']; // We're getting data out of the object
     const URL = "https://dataservice.accuweather.com/currentconditions/v1/"+CITY_CODE+"?apikey="+API_KEY+"&details=true";
     fetch(URL)
