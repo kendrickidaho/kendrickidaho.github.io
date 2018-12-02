@@ -95,6 +95,29 @@ function getcondition(weather){
       return "fog";
    }
 }
+// change the summary image
+function changeSummaryImage(curCondition) {
+   console.log(curCondition);
+   // get the current weather container
+   const curWeather = document.getElementById("curWeather");
 
+   switch (curCondition) {
+       case "Clear":
+           curWeather.setAttribute("class", "clear");
+           break;
+       case "Cloudy":
+           curWeather.setAttribute("class", "cloudy");
+           break;
+       case "Fog":
+           curWeather.setAttribute("class", "foggy");
+           break;
+       case "Rain":
+           curWeather.setAttribute("class", "rainy");
+           break;
+       case "Snow":
+           curWeather.setAttribute("class", "snowy");
+           break;
+   }
+}
 
 

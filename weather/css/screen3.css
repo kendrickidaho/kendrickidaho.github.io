@@ -86,6 +86,9 @@ body{
    .cloudy {
        background-image: url(/weather/images/Optimized/clouds-small.jpg)
    }
+   .hide {
+       display: none;
+   }
 /* 3. Mobile First Rule  */
 #page-header>img{
     width: 10vw
