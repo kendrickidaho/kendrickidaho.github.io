@@ -52,7 +52,7 @@ function getCode(LOCALE) {
   } // end getCode function
   // Get Current Weather data from API
 function getWeather(locData) {
-    const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs    ';
+    const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
     const CITY_CODE = locData['key']; // We're getting data out of the object
     const URL = "https://dataservice.accuweather.com/currentconditions/v1/"+CITY_CODE+"?apikey="+API_KEY+"&details=true";
     fetch(URL)
@@ -75,7 +75,7 @@ function getWeather(locData) {
   } // end getWeather function
   // Get next 12 hours of forecast data from API
 function getHourly(locData) {
-    const API_KEY = 'Paste Your API Key Here';
+    const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
     const CITY_CODE = locData['key'];
     const URL = "https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"+CITY_CODE+"?apikey="+API_KEY;
     fetch(URL)
