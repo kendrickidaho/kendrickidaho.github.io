@@ -243,6 +243,6 @@ function getHourly(locData) {
     document.getElementById("tempFl").innerHTML = locData[""];
     document.getElementById("windSpeed").innerHTML = locData["WindSpeed"];
     document.getElementById("windDirec").innerHTML = locData["windDirection"];
-    document.getElementById("hourly").innerHTML = locData["hourly"]
+    document.getElementById("hourly").innerHTML = locData["hourly"];
   }
 
