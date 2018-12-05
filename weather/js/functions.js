@@ -231,18 +231,60 @@ function getHourly(locData) {
       })
       .catch(error => console.log('There was an error: ', error))
   } // end getHourly function
-  function buildPage(locData){
-    document.getElementById("state").innerHTML = locData['state'];
-    document.getElementById("city").innerHTML = locData['name'];
-    document.getElementById("zipcode").innerHTML = locData["postal"];
-    document.getElementById("elevation").innerHTML = locData["elevation"];
-    document.getElementById("latlong").innerHTML = locData["geoposition"];
-    document.getElementById("temp1").innerHTML = locData["currentTemp"];
-    document.getElementById("tempHigh").innerHTML = locData["pastHigh"];
-    document.getElementById("tempLow").innerHTML = locData["pastLow"];
-    document.getElementById("tempFl").innerHTML = locData[""];
-    document.getElementById("windSpeed").innerHTML = locData["WindSpeed"];
-    document.getElementById("windDirec").innerHTML = locData["windDirection"];
-    document.getElementById("hourly").innerHTML = locData["hourly"];
-  }
+//   function buildPage(locData){
+//     document.getElementById("state").innerHTML = locData['state'];
+//     document.getElementById("city").innerHTML = locData['name'];
+//     document.getElementById("zipcode").innerHTML = locData["postal"];
+//     document.getElementById("elevation").innerHTML = locData["elevation"];
+//     document.getElementById("latlong").innerHTML = locData["geoposition"];
+//     document.getElementById("temp1").innerHTML = locData["currentTemp"];
+//     document.getElementById("tempHigh").innerHTML = locData["pastHigh"];
+//     document.getElementById("tempLow").innerHTML = locData["pastLow"];
+//     document.getElementById("tempFl").innerHTML = locData[""];
+//     document.getElementById("windSpeed").innerHTML = locData["WindSpeed"];
+//     document.getElementById("windDirec").innerHTML = locData["windDirection"];
+//     document.getElementById("hourly").innerHTML = locData["hourly"];
+//   }
+function buildPage(locData) {
+   console.log(locData);
+
+   buildWC(locData.currentTemp, locData.windSpeed);
+     
+
+   windDial(locData.windDirection);
+
+   let condition = getCondition(locData.summary);
+
+     console.log(condition);
+
+   changeSummaryImage(condition);
+
+ document.getElementById('state').innerHTML = locData.name + ", " + locData.state;
+ document.getElementById('zipcode').innerHTML = "Zipcode " + locData.postal;
+ document.getElementById('elevation').innerHTML = "Elevation " + locData.elevation;
+ document.getElementById('latlong').innerHTML = "Location " + locData.geoposition;
+ document.getElementById('temp1').innerHTML = locData.currentTemp + "&deg;F";
+ document.getElementById('tempHigh').innerHTML = locData.pastHigh + "&deg;F";
+ document.getElementById('tempLow').innerHTML = locData.pastLow + "&deg;F";
+ document.getElementById('windSpeed').innerHTML = locData.windSpeed + " mph";
+ document.getElementById('windDirec').innerHTML = "Direction: " + locData.windDirection;
+ document.getElementById('gust').innerHTML = "Windspeed: " + locData.windSpeed;
+ document.getElementById('weathercond').innerHTML = locData.summary;
+ document.title = locData.name + ", " + locData.state;
+
+}
+
+// formats a value into a 12h AM/PM time string
+function format_time(hour) {
+ if(hour > 23){
+   hour -= 24;
+ }
+ let amPM = (hour > 11) ? "pm" : "am";
+ if(hour > 12) {
+   hour -= 12;
+ } else if(hour == 0) {
+   hour = "12";
+ }
+ return hour + amPM;
+} // end format_time function
 
