@@ -232,6 +232,16 @@ function getHourly(locData) {
       .catch(error => console.log('There was an error: ', error))
   } // end getHourly function
   function buildPage(locData){
+   console.log(locData);
+
+   buildWC(locData.currentTemp, locData.windSpeed);
+     
+
+   windDial(locData.windDirection);
+
+   let condition = getCondition(locData.summary);
+
+     console.log(condition);
     document.getElementById("state").innerHTML = locData['state'];
     document.getElementById("city").innerHTML = locData['name'];
     document.getElementById("zipcode").innerHTML = locData["postal"];
@@ -268,3 +278,4 @@ function getLocationByKey(cityKey) {
      getWeather(locData);
      })
     .catch(error => console.log('There was a getLocationByKey error: ', error))
+   }
