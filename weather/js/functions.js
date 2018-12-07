@@ -268,4 +268,3 @@ function getLocationByKey(cityKey) {
      getWeather(locData);
      })
     .catch(error => console.log('There was a getLocationByKey error: ', error))
-   }
