@@ -2,8 +2,8 @@
 console.log('My javascript is being read.');
 
 // Variables for Function Use
-const temp = 31;
-const speed = 5;
+// const temp = 31;
+// const speed = 5;
 buildWC(speed, temp);
 const direction = "E"; //Set your own value
 windDial(direction);
@@ -78,6 +78,7 @@ function windDial(direction){
      break;
    }
   }
+
 function getcondition(weather){
    if(weather == "sunny" || weather == "clear"){
       return "clear";
@@ -95,6 +96,7 @@ function getcondition(weather){
       return "fog";
    }
 }
+
 // change the summary image
 function changeSummaryImage(curCondition) {
    console.log(curCondition);
@@ -119,26 +121,8 @@ function changeSummaryImage(curCondition) {
            break;
    }
 }
-const STATUS = document.getElementById('status');
- STATUS.innerHTML = 'Getting Location...';
- // Call the function to get our location
-getGeoLocation();
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-     const LAT = position.coords.latitude;
-     const LONG = position.coords.longitude;
-  
-     // Combine the values
-     const LOCALE = LAT + "," + LONG;
-     console.log(`Lat and Long are: ${LOCALE}.`);
-     // Call getCode function, send locale
-     getCode(LOCALE);
-  
-  
-    })
-   } else {
-    STATUS.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";
-   } // end else
+
+
    // Get location code from API
 function getCode(LOCALE) {
     const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
@@ -160,6 +144,7 @@ function getCode(LOCALE) {
       })
      .catch(error => console.log('There was a getCode error: ', error))
   } // end getCode function
+
   // Get Current Weather data from API
 function getWeather(locData) {
     const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
@@ -183,6 +168,7 @@ function getWeather(locData) {
       })
      .catch(error => console.log('There was an error: ', error))
   } // end getWeather function
+
   // Get next 12 hours of forecast data from API
 function getHourly(locData) {
     const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
@@ -231,6 +217,7 @@ function getHourly(locData) {
       })
       .catch(error => console.log('There was an error: ', error))
   } // end getHourly function
+
   function buildPage(locData){
     document.getElementById("state").innerHTML = locData['state'];
     document.getElementById("city").innerHTML = locData['name'];
@@ -245,26 +232,28 @@ function getHourly(locData) {
     document.getElementById("windDirec").innerHTML = locData["windDirection"];
     document.getElementById("hourly").innerHTML = locData["hourly"];
   }
+
   // Get location info, based on city key, from API
-function getLocationByKey(cityKey) {
-   const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
-   const URL = 'https://dataservice.accuweather.com/locations/v1/'+cityKey+'?apikey='+API_KEY;
-   fetch(URL)
-    .then(response => response.json())
-    .then(function (data) {
-     console.log('Json object from getLocationByKey function:');
-     console.log(data);
-     const locData = {}; // Create an empty object
-     locData['key'] = data.Key; // Add the value to the object
-     locData['name'] = data.LocalizedName;
-     locData['postal'] = data.PrimaryPostalCode;
-     locData['state'] = data.AdministrativeArea.LocalizedName;
-     locData['stateAbbr'] = data.AdministrativeArea.ID;
-     let lat = data.GeoPosition.Latitude;
-     let long = data.GeoPosition.Longitude;
-     const LOCALE = lat+', '+long;
-     locData['geoposition'] = LOCALE;
-     locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
-     getWeather(locData);
-     })
-    .catch(error => console.log('There was a getLocationByKey error: ', error))
+// function getLocationByKey(cityKey) {
+//    const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
+//    const URL = 'https://dataservice.accuweather.com/locations/v1/'+cityKey+'?apikey='+API_KEY;
+//    fetch(URL)
+//     .then(response => response.json())
+//     .then(function (data) {
+//      console.log('Json object from getLocationByKey function:');
+//      console.log(data);
+//      const locData = {}; // Create an empty object
+//      locData['key'] = data.Key; // Add the value to the object
+//      locData['city'] = data.LocalizedName;
+//      locData['zipcode'] = data.PrimaryPostalCode;
+//      locData['state'] = data.AdministrativeArea.LocalizedName;
+//      locData['stateAbbr'] = data.AdministrativeArea.ID;
+//      let lat = data.GeoPosition.Latitude;
+//      let long = data.GeoPosition.Longitude;
+//      const LOCALE = lat+', '+long;
+//      locData['geoposition'] = LOCALE;
+//      locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
+//      getWeather(locData);
+//      })
+//     .catch(error => console.log('There was a getLocationByKey error: ', error));
+//    }
