@@ -234,7 +234,7 @@ function getHourly(locData) {
   }
 
   function getLocationByKey(cityKey) {
-   const API_KEY = 'Your API Key Goes Here';
+   const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
    const URL = 'https://dataservice.accuweather.com/locations/v1/'+cityKey+'?apikey='+API_KEY;
    fetch(URL)
     .then(response => response.json())
