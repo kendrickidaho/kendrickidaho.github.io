@@ -49,3 +49,5 @@ function processJSON(searchValue) {
       searchResults.innerHTML = list;
     }).catch(error => console.log('There was an error: ', error))
 } // ends the processJSON function
+// Get location info, based on city key, from API
+
