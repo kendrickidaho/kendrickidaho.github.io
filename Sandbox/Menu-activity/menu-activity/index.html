@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather Center</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/weather-style.css" media="screen">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header id="page-header">
+        <h1>Weather Center</h1>
+        <h2 class="tagline">Know your weather</h2>
+      </header>
+      <nav id="page-nav">
+        <ul class="flexlist">
+          <li><a href="." title="Weather Center Current Location">Current</a></li>
+          <li><a href="views/franklin.html" title="Weather in Franklin, ID">Franklin</a></li>
+          <li><a href="views/greenville.html" title="Weather in Greenville, SC">Greenville</a></li>
+        </ul>
+      </nav>
+
+       <section id="search">
+        <form method="get" action="https://www.accuweather.com/en/search-locations" id="searchform">
+            <input type="search" name="query" id="query">
+            <input type="submit" name="submit" value="Search" id="send">
+        </form>
+        <div id="searchResults" class=""></div>
+    </section>
+    <p id="status"></p>
+    <main class="hidden" id="main">
+
+        <h1 id="name">Current Weather</h1>
+        <section id="location-info">
+            <ul>
+                <li id="zip"><strong>Zip:</strong> 83237 |</li>
+                <li id="elevation"><strong>Evelation:</strong> 4968 ft. |</li>
+                <li id="location"><strong>Location:</strong> 42.07, 111.79</li>
+            </ul>
+        </section>
+        <div id="sections">
+            <section class="border" id="temp">
+                <h3 class="hide">Temperature</h3>
+                <p id="real-temp">45&#176;F</p>
+                <section id="high-low">
+                    <p id="high-temp" title="high">64&#176;F</p>
+                    <p id="low-temp" title="low">41&#176;F</p>
+                </section>
+                <p id="realFeelTemp">??</p>
+            </section>
+            <section class="border" id="wind">
+                <h3 class="hide">Wind</h3>
+                <p>N</p>
+                <img id="windPointerImg" src="/homework/responsive_media/weather-images/wind-pointer.png" alt="wind pointer image">
+                <p id="wind-speed">5 mph</p>
+                <p id="wind-direction"><strong>Direction:</strong> SW</p>
+                <p id="wind-gusts"><strong>Gusts:</strong> 5 mph</p>
+            </section>
+            <section class="border" id="sky">
+                <h3 id="DailyCond">Rain</h3>
+                <!-- <img id="weatherVideo" src="" alt="rainy window"> -->
+            </section>
+        </div>
+        <section class="border" id="hourly-forecast">
+            <h4>Hourly Forecast</h4>
+            <ul>
+                <li>12am: 41F</li>
+                <li>1am: 41F</li>
+                <li>2am: 41F</li>
+                <li>3am: 41F</li>
+                <li>4am: 41F</li>
+                <li>5am: 41F</li>
+                <li>6am: 42F</li>
+                <li>7am: 44F</li>
+                <li>8am: 44F</li>
+                <li>9am: 46F</li>
+                <li>10am: 49F</li>
+                <li>11am: 51F</li>
+                <li>12pm: 55F</li>
+                <li>1pm: 58F</li>
+                <li>2pm: 62F</li>
+                <li>3pm: 64F</li>
+                <li>4pm: 64F</li>
+                <li>5pm: 62F</li>
+                <li>6pm: 61F</li>
+                <li>7pm: 60F</li>
+                <li>8pm: 59F</li>
+                <li>9pm: 58F</li>
+                <li>10pm: 52F</li>
+                <li>11pm: 48F</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+      <script src="scripts/menu.js"></script>
+      <script src="/Sandbox/Menu-activity/Search.js"></script>
+
+    </div>
+  </body>
+
+</html>
