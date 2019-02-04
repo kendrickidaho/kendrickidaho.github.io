@@ -133,7 +133,7 @@ nav ul li {
       display: none
   }
 
-  /* 4. Large screen rules
+  /* 4. Large screen rules */
   @media Screen and (min-width: 750px){
 header{
     font-size: 3em;
@@ -148,9 +148,9 @@ header>img{
     white-space: nowrap;
     overflow: scroll;
 }
-  } */
+  }
      /* Background pictures for summary */
-     /* .clear {
+     .clear {
         background-image: url("/weather/images/Optimized/clear-large.jpg");
        }
        .rain {
@@ -164,4 +164,4 @@ header>img{
        }
        .cloudy {
            background-image: url(/weather/images/Optimized/clouds-Large.jpg)
-       } */
+       }
