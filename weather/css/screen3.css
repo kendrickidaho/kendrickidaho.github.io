@@ -1,167 +1,214 @@
 /* This is for screened devices */
 
+
 /* /* 1. imports
 2. General Style Rules 
 3. Mobile First Rules 
 4. Large Screen Rules  */
 
+
 /* 1. imports */
+
 @import url("normalize.css");
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
 /* 2. General Style Rules */
+
 html {
-    box-sizing: border-box;
-}
-*, *:before, *:after{
-    box-sizing: inherit
+	box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: sansita, Eurostyle, sans-serif;
+*,
+*:before,
+*:after {
+	box-sizing: inherit
 }
 
-body{
-    font-family: helvetica, Verdana,  sans-serif;
-    font-size: 20px
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: sansita, Eurostyle, sans-serif;
 }
-.title{
-    background-color: rgba(rgb(255, 0, 0), green, blue, alpha);
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    text-align: center;
+
+body {
+	font-family: helvetica, Verdana, sans-serif;
+	font-size: 20px
 }
-   
-   
+
+.title {
+	background-color: rgba(rgb(255, 0, 0), green, blue, alpha);
+	margin: .2em auto;
+	border: 1px solid;
+	border-radius: 15px;
+	text-align: center;
+}
+
 #dial {
-    height: 150px;
-    width: 150px;
-    background: no-repeat center/85% url(/homework/responsive_media/weather-images/wind-pointer.png);
-    z-index: 100;
-    margin: -.6em auto 0;
-   }
-    /* 8 ways  */
-   .n {
-       transform: rotate(0deg);
-   }
-   .ne{
-       transform: rotate(45deg)
-   }
-   .e {
-       transform: rotate(90deg)
-   }
-   .se {
-       transform: rotate(135deg)
-   }
-   .s {
-       transform: rotate(180deg)
-   }
-   .sw {
-       transform: rotate(225deg)
-   }
-   .w {
-       transform: rotate(270deg)
-   }
-   .nw {
-       transform: rotate(315deg)
-   }
-   #curWeather {
-    background-size: cover;
-   }
-
-   /* Background pictures for summary */
-   .clear {
-    background-image: url("/weather/images/Optimized/clear-small.jpg");
-   }
-   .rain {
-    background-image: url(/weather/images/Optimized/rain-small.jpg)
-   }
-   .fog {
-    background-image: url(/weather/images/Optimized/fog-small.jpg)
-   }
-   .snow {
-       background-image: url(/weather/images/Optimized/snow-small.jpg)
-   }
-   .cloudy {
-       background-image: url(/weather/images/Optimized/clouds-small.jpg)
-   }
-   .hide {
-       display: none;
-   }
-/* 3. Mobile First Rule  */
-#page-header>img{
-    width: 10vw
+	height: 150px;
+	width: 150px;
+	background: no-repeat center/85% url(/homework/responsive_media/weather-images/wind-pointer.png);
+	z-index: 100;
+	margin: -.6em auto 0;
 }
+
+
+/* 8 ways  */
+
+.n {
+	transform: rotate(0deg);
+}
+
+.ne {
+	transform: rotate(45deg)
+}
+
+.e {
+	transform: rotate(90deg)
+}
+
+.se {
+	transform: rotate(135deg)
+}
+
+.s {
+	transform: rotate(180deg)
+}
+
+.sw {
+	transform: rotate(225deg)
+}
+
+.w {
+	transform: rotate(270deg)
+}
+
+.nw {
+	transform: rotate(315deg)
+}
+
+#curWeather {
+	background-size: cover;
+}
+
+
+/* Background pictures for summary */
+
+.clear {
+	background-image: url("/weather/images/Optimized/clear-small.jpg");
+}
+
+.rain {
+	background-image: url(/weather/images/Optimized/rain-small.jpg)
+}
+
+.fog {
+	background-image: url(/weather/images/Optimized/fog-small.jpg)
+}
+
+.snow {
+	background-image: url(/weather/images/Optimized/snow-small.jpg)
+}
+
+.cloudy {
+	background-image: url(/weather/images/Optimized/clouds-small.jpg)
+}
+
+.hide {
+	display: none;
+}
+
+
+/* 3. Mobile First Rule  */
+
+#page-header>img {
+	width: 10vw
+}
+
+
 /* #curWeather{
     display: flex;
     flex-wrap: nowrap; */
 
-.title{
-    background-color: rgba(rgb(255, 0, 0), green, blue, alpha);
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    text-align: center;
-}
-   
-
-nav ul li { 
-    display: inline-block; 
-    list-style: none; 
-  }
-  nav {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border: 1px solid;
-    text-align: center;
-    position: fixed;
-  }
-  footer{
-    margin-bottom: 2em;
-   }
-   #site-brand {
-    font-size: 2em;
-    font-weight: 600;
-  }
-  #logo {
-      width: 67px;
-      height: 66px;
-  }
-  .temp {
-      display: none
-  }
-
-  /* 4. Large screen rules */
-  @media Screen and (min-width: 750px){
-header{
-    font-size: 3em;
-    display: inline-block; 
-    vertical-align: middle;
+.title {
+	background-color: rgba(rgb(255, 0, 0), green, blue, alpha);
+	margin: .2em auto;
+	border: 1px solid;
+	border-radius: 15px;
+	text-align: center;
 }
 
-header>img{
-    width: 5vw
+nav ul li {
+	display: inline-block;
+	list-style: none;
 }
-#time {
-    white-space: nowrap;
-    overflow: scroll;
+
+nav {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border: 1px solid;
+	text-align: center;
+	position: fixed;
 }
-  }
-     /* Background pictures for summary */
-     .clear {
-        background-image: url("/weather/images/Optimized/clear-large.jpg");
-       }
-       .rain {
-        background-image: url(/weather/images/Optimized/rain-large.jpg)
-       }
-       .fog {
-        background-image: url(/weather/images/Optimized/fog-large.jpg)
-       }
-       .snow {
-           background-image: url(/weather/images/Optimized/snow-large.jpg)
-       }
-       .cloudy {
-           background-image: url(/weather/images/Optimized/clouds-Large.jpg)
-       }
+
+footer {
+	margin-bottom: 2em;
+}
+
+#site-brand {
+	font-size: 2em;
+	font-weight: 600;
+}
+
+#logo {
+	width: 67px;
+	height: 66px;
+}
+
+.temp {
+	display: none
+}
+
+
+/* 4. Large screen rules */
+
+@media Screen and (min-width: 750px) {
+	header {
+		font-size: 3em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	header>img {
+		width: 5vw
+	}
+	#time {
+		white-space: nowrap;
+		overflow: scroll;
+	}
+}
+
+
+/* Background pictures for summary */
+
+.clear {
+	background-image: url("/weather/images/Optimized/clear-large.jpg");
+}
+
+.rain {
+	background-image: url(/weather/images/Optimized/rain-large.jpg)
+}
+
+.fog {
+	background-image: url(/weather/images/Optimized/fog-large.jpg)
+}
+
+.snow {
+	background-image: url(/weather/images/Optimized/snow-large.jpg)
+}
+
+.cloudy {
+	background-image: url(/weather/images/Optimized/clouds-Large.jpg)
+}
