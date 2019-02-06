@@ -93,10 +93,10 @@ body{
 #page-header>img{
     width: 10vw
 }
-#curWeather{
+/* #curWeather{
     display: flex;
-    flex-wrap: nowrap;
-}
+    flex-wrap: nowrap; */
+
 .title{
     background-color: rgba(red, green, blue, alpha);
     margin: .2em auto;
