@@ -96,7 +96,7 @@ body {
 
 /* Background pictures for summary */
 
-.clear {
+/* .clear {
 	background-image: url("/weather/images/Optimized/clear-small.jpg");
 }
 
@@ -118,7 +118,7 @@ body {
 
 .hide {
 	display: none;
-}
+} */
 
 
 /* 3. Mobile First Rule  */
