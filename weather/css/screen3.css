@@ -14,6 +14,7 @@
 
 /* 2. General Style Rules */
 
+
 html {
 	box-sizing: border-box;
 }
@@ -172,6 +173,9 @@ footer {
 	display: none
 }
 
+#title img{
+	max-width:100%
+}
 
 /* 4. Large screen rules */
 
