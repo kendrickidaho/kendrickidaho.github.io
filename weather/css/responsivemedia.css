@@ -27,6 +27,15 @@ body{
 }
 
 /* 3. Mobile First Rule  */
+@media screen and (min-width:600px)
+
+{.small{
+    display:none;
+}
+.large{
+    display:block;
+}
+}
 #page-header>img{
     width: 10vw
 }
@@ -66,7 +75,12 @@ nav ul li {
   }
 
   /* 4. Large screen rules */
-  @media Screen and (min-width: 750px){
+  .small{
+      display: block;
+  }
+  .large{
+      display: none;
+  }
 header{
     font-size: 3em;
     display: inline-block; 
@@ -76,4 +90,3 @@ header{
 header>img{
     width: 5vw
 }
-  }
