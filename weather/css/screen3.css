@@ -40,7 +40,7 @@ body {
 }
 
 .title {
-	background-color: (red, green, blue, alpha);
+	background-color: rgb(255, 255, 0);
 	margin: .2em auto;
 	border: 1px solid;
 	border-radius: 15px;
@@ -63,31 +63,31 @@ body {
 }
 
 .ne {
-	transform: rotate(45deg)
+	transform: rotate(45deg);
 }
 
 .e {
-	transform: rotate(90deg)
+	transform: rotate(90deg);
 }
 
 .se {
-	transform: rotate(135deg)
+	transform: rotate(135deg);
 }
 
 .s {
-	transform: rotate(180deg)
+	transform: rotate(180deg);
 }
 
 .sw {
-	transform: rotate(225deg)
+	transform: rotate(225deg);
 }
 
 .w {
-	transform: rotate(270deg)
+	transform: rotate(270deg);
 }
 
 .nw {
-	transform: rotate(315deg)
+	transform: rotate(315deg);
 }
 
 #curWeather {
@@ -95,9 +95,9 @@ body {
 }
 
 
-/* Background pictures for summary */ */
+/* Background pictures for summary */
 
-* .clear {
+.clear {
 	background-image: url("/weather/images/Optimized/clear-small.jpg");
 }
 
@@ -131,10 +131,11 @@ body {
 #curWeather{
 	display: flex;
 	flex-wrap: nowrap;
+	background-color: blue;
 }
 
 .title {
-	background-color: (red, green, blue);
+	background-color: rgb(255, 255, 0);
 	margin: .2em auto;
 	border: 1px solid;
 	border-radius: 15px;

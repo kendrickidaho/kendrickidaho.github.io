@@ -2,10 +2,10 @@
 console.log('My javascript is being read.');
 
 // Variables for Function Use
-// const temp = 31;
-// const speed = 5;
+const temp = 31;
+const speed = 5;
 buildWC(speed, temp);
-const direction = "E"; //Set your own value
+const direction = "SE"; //Set your own value
 windDial(direction);
 
 
