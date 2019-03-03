@@ -1,3 +1,0 @@
-function windchill(speed,temp){
-
-}

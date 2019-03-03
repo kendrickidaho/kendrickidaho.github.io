@@ -29,7 +29,7 @@ console.log(currentWeather);
    
     // Display the windchill
     console.log(wc);
-    // wc = 'Feels like '+wc+'°F';
+    wc = 'Feels like '+wc+'&deg;F';
     feelTemp.innerHTML = wc;
     }
 
