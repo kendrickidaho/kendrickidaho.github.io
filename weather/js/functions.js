@@ -122,6 +122,9 @@ function changeSummaryImage(curCondition) {
    }
 }
 
+// statusMessagesetAttribute("class"),"hide";
+
+
 
 // Get location code from API
 // function getCode(LOCALE) {

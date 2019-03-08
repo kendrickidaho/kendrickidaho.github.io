@@ -7,34 +7,37 @@
 
     <meta name="description" content="This shows the weather for Greenville,SC">
     <meta name="viewport" content="width=device-width">
-    <link href="/weather/css/screen3.css" rel="Stylesheet" type="text/css" media="screen">
+    <link href="css/screen3.css" rel="Stylesheet" type="text/css" media="screen">
     
-<!-- </head id="page-header"> -->
+</head id="page-header">
         <div id="logo">&#9748;</div>
         <p id="site-brand">The Weather Site Plan </p>
        </head>
 
-        <header>
+        <title id='page-title'>
  <img src="/images/plan-images/logo.jpeg" alt="Purple Umbrella"> The Weather Site    
-    </header>
-    <nav> <a href="/index.html">Home</a> <a href="/weather/index.html"> Current </a>|<a href="/Sandbox/Menu-activity/menu-activity/index.html">Search</a> | <a href="/weather/franklin.html">Franklin Idaho</a></nav>  | <main>
+        </title>
+    <nav id='page-Nav'><a href="/index.html">Home</a> <a href="/weather/index.html"> Current </a>|<a href="/Sandbox/Menu-activity/menu-activity/index.html">Search</a> | <a href="/weather/franklin.html">Franklin Idaho </a></nav>  | 
+    <section id="statusMessage">Please be patient while I get your weather information.</section>
+    <main id="mainContent" class="hide">
+
             <section class="title" id=location>        
-                <h1>Greenville, South Carolina</h1>
+                <h1 id="contentHeading"> Greenville, South Carolina</h1>
         <h3> Zip:29601    | Elevation:966          | Location: -82.4, 34.85</h3>
             </section>
         
             <div id="curWeather">
                 <h3>Temperature</h3>
                 <section class="title" id="temps">       
-                <h3>Temp: 55F</h3>
-                <h3>High: 72F</h3>
-                <h3>Low: 51F</h3>
+                <h3>Temp:</h3>
+                <h3>High:</h3>
+                <h3>Low:</h3>
                 <h3>Feels Like <span id="feels"></span>F</h3>
                 </section>
             
                 <section class="title" id="wind">
                 <div id="dial" class="ne"></div>
-                <h3>Wind: 8mph </h3>
+                <h3>Wind: </h3>
                 <h3>wind direction:SW </h3>    
                 </section>
     
@@ -55,4 +58,7 @@
     <footer>
     &copy;2018 Kendrick Villavicencio 
     </footer>
+    <script src="/weather/js/functions.js"></script>
+    <script src="/weather/js/localdata.js"></script>
+
     </body>
