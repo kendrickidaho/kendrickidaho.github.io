@@ -61,8 +61,10 @@ function fetchData(weatherURL){
 
 
     // Set the temperature information
-
-
+    // document.getElementById('tempTemp').innerHTML = tempTemp;
+    // console.log(`id temp has been set to: ${tempTemp}`);
+    // document.getElementById('tempHigh').innerHTML = tempHigh;
+    // document.getElementById('low').innerHTML = tempLow;
     // Set the wind information
 
 
