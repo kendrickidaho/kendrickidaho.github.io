@@ -1,6 +1,9 @@
 // Weather site JavaScript functions 
 console.log('My javascript is being read.');
 
+
+
+
 // Variables for Function Use
 const temp = 31;
 const speed = 5;
@@ -9,90 +12,95 @@ const direction = "SE"; //Set your own value
 windDial(direction);
 
 
-const currentWeather = getcondition("precipitation");
+// const currentWeather = getcondition("precipitation");
 console.log(currentWeather);
 
+function convertToFahrenheit(Celsius) {
+   var fahrenheit;
+   // Only change code below this line
 
- // Calculate the Windchill
- function buildWC(speed, temp) {
-    const feelTemp = document.getElementById('feels');
-   
-    // Compute the windchill
-    let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
-    console.log(wc);
-   
-    // Round the answer down to integer
-    wc = Math.floor(wc);
-   
-    // If chill is greater than temp, return the temp
-    wc = (wc > temp)?temp:wc;
-   
-    // Display the windchill
-    console.log(wc);
-    wc = 'Feels like '+wc+'&deg;F';
-    feelTemp.innerHTML = wc;
-    }
+   fahrenheit = (Celsius * (9 / 5)) + 32;
 
-    // Wind Dial Function
-function windDial(direction){
+   // only change code above line
+   return fahrenheit;
+}
+
+// Calculate the Windchill
+function buildWC(speed, temp) {
+   const feelTemp = document.getElementById('feels');
+
+   // Compute the windchill
+   let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
+   console.log(wc);
+
+   // Round the answer down to integer
+   wc = Math.floor(wc);
+
+   // If chill is greater than temp, return the temp
+   wc = (wc > temp) ? temp : wc;
+
+   // Display the windchill
+   console.log(wc);
+   wc = 'Feels like ' + wc + '&deg;F';
+   feelTemp.innerHTML = wc;
+}
+
+// Wind Dial Function
+function windDial(direction) {
    // Get the container
    const dial = document.getElementById("dial");
    console.log(direction);
    // Determine the dial class
-   switch (direction){
-    case "North":
-    case "N":
-     dial.setAttribute("class", "n"); //"n" is the CSS rule selector
-     break;
-    case "NE":
-    case "NNE":
-    case "ENE":
-     dial.setAttribute("class", "ne");
-     break;
-    case "NW":
-    case "NNW":
-    case "WNW":
-     dial.setAttribute("class", "nw");
-     break;
-    case "South":
-    case "S":
-     dial.setAttribute("class", "s");
-     break;
-    case "SE":
-    case "SSE":
-    case "ESE":
-     dial.setAttribute("class", "se");
-     break;
-    case "SW":
-    case "SSW":
-    case "WSW":
-     dial.setAttribute("class", "sw");
-     break;
-    case "East":
-    case "E":
-     dial.setAttribute("class", "e");
-     break;
-    case "West":
-    case "W":
-     dial.setAttribute("class", "w");
-     break;
+   switch (direction) {
+      case "North":
+      case "N":
+         dial.setAttribute("class", "n"); //"n" is the CSS rule selector
+         break;
+      case "NE":
+      case "NNE":
+      case "ENE":
+         dial.setAttribute("class", "ne");
+         break;
+      case "NW":
+      case "NNW":
+      case "WNW":
+         dial.setAttribute("class", "nw");
+         break;
+      case "South":
+      case "S":
+         dial.setAttribute("class", "s");
+         break;
+      case "SE":
+      case "SSE":
+      case "ESE":
+         dial.setAttribute("class", "se");
+         break;
+      case "SW":
+      case "SSW":
+      case "WSW":
+         dial.setAttribute("class", "sw");
+         break;
+      case "East":
+      case "E":
+         dial.setAttribute("class", "e");
+         break;
+      case "West":
+      case "W":
+         dial.setAttribute("class", "w");
+         break;
    }
-  }
+}
 
-function getcondition(weather){
-   if(weather == "sunny" || weather == "clear"){
+function getcondition(weather) {
+   if (weather == "sunny" || weather == "clear") {
       return "clear";
-   }
-   else if (weather == "rain" || weather == "precipitation") {
+   } else if (weather == "rain" || weather == "precipitation") {
       return "rain";
-   }
-   else if(weather == "blizzard" || weather == "freezing") {
+   } else if (weather == "blizzard" || weather == "freezing") {
       return "snow"
-   }
-   else if (weather == "overcast"|| weather == "dreary"){
+   } else if (weather == "overcast" || weather == "dreary") {
       return "clouds"
-   }
-   else if (weather == "Dense"|| weather =="Hazy"){
+   } else if (weather == "Dense" || weather == "Hazy") {
       return "fog";
    }
 }
@@ -104,158 +112,139 @@ function changeSummaryImage(curCondition) {
    const curWeather = document.getElementById("curWeather");
 
    switch (curCondition) {
-       case "Clear":
-           curWeather.setAttribute("class", "clear");
-           break;
-       case "Cloudy":
-           curWeather.setAttribute("class", "cloudy");
-           break;
-       case "Fog":
-           curWeather.setAttribute("class", "foggy");
-           break;
-       case "Rain":
-           curWeather.setAttribute("class", "rainy");
-           break;
-       case "Snow":
-           curWeather.setAttribute("class", "snowy");
-           break;
+      case "Clear":
+         curWeather.setAttribute("class", "clear");
+         break;
+      case "Cloudy":
+         curWeather.setAttribute("class", "cloudy");
+         break;
+      case "Fog":
+         curWeather.setAttribute("class", "foggy");
+         break;
+      case "Rain":
+         curWeather.setAttribute("class", "rainy");
+         break;
+      case "Snow":
+         curWeather.setAttribute("class", "snowy");
+         break;
    }
 }
 
 // statusMessagesetAttribute("class"),"hide";
 
+// Setup localStorage
+var storage = window.localStorage;
+// Set global variable for custom header required by NWS API
+var idHeader = {
+   headers: {
+      "User-Agent": "Student Learning Project - vil17009@byui.edu"
+   }
+};
+
+// Populate the current location weather page
+function buildPage() {
+   // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
+   document.getElementById("elevation").innerHTML = storage.getItem("elevation");
+   // Task 2 - Populate location information
+   // Task 3 - Populate weather information
+
+    // Task 4 - Hide status and show main
+        contentContainer.setAttribute('class', 'main');
+        statusMessage.setAttribute('class', 'hide');
+
+        console.log("The build page function is being run");
+      }
+
+// Gets location information from the NWS API
+function getLocation(locale) {
+   const URL = "https://api.weather.gov/points/" + locale;
+   // NWS User-Agent header (built above) will be the second parameter 
+   fetch(URL, idHeader)
+      .then(function (response) {
+         if (response.ok) {
+            return response.json();
+         }
+         throw new ERROR('Response not OK.');
+      })
+      .then(function (data) {
+         // Let's see what we got back
+         console.log('Json object from getLocation function:');
+         console.log(data);
+         // Store data to localstorage 
+         storage.setItem("locName", data.properties.relativeLocation.properties.city);
+         storage.setItem("locState", data.properties.relativeLocation.properties.state);
+
+         // Next, get the weather station ID before requesting current conditions 
+         // URL for station list is in the data object 
+         let stationsURL = data.properties.observationStations;
+         // Call the function to get the list of weather stations
+         getStationId(stationsURL);
+      })
+      .catch(error => console.log('There was a getLocation error: ', error))
+} // end getLocation function\\
+
+// Gets weather station list and the nearest weather station ID from the NWS API
+function getStationId(stationsURL) {
+   // NWS User-Agent header (built above) will be the second parameter 
+   fetch(stationsURL, idHeader)
+      .then(function (response) {
+         if (response.ok) {
+            return response.json();
+         }
+         throw new ERROR('Response not OK.');
+      })
+      .then(function (data) {
+         // Let's see what we got back
+         console.log('From getStationId function:');
+         console.log(data);
+
+         // Store station ID and elevation (in meters - will need to be converted to feet) 
+         let stationId = data.features[0].properties.stationIdentifier;
+         let stationElevation = data.features[0].properties.elevation.value;
+         console.log('Station and Elevation are: ' + stationId, stationElevation);
+
+         // Store data to localstorage 
+         storage.setItem("stationId", stationId);
+         storage.setItem("stationElevation", stationElevation);
+
+         // Request the Current Weather for this station 
+         getWeather(stationId);
+      })
+      .catch(error => console.log('There was a getStationId error: ', error))
+} // end getStationId function
+
+// Gets current weather information for a specific weather station from the NWS API
+function getWeather(stationId) {
+   // This is the URL for current observation data 
+   const URL = 'https://api.weather.gov/stations/' + stationId + '/observations/latest';
+   // NWS User-Agent header (built above) will be the second parameter 
+   fetch(URL, idHeader)
+      .then(function (response) {
+         if (response.ok) {
+            return response.json();
+         }
+         throw new ERROR('Response not OK.');
+      })
+      .then(function (data) {
+         // Let's see what we got back
+         console.log('From getWeather function:');
+         console.log(data);
+
+         // Store weather information to localStorage 
+         storage.setItem("elevation", data.properties.elevation.value);
+         let celcius = data.properties.temperature.value
+         let fahrenheit = convertToFahrenheit(celcius);
+
+         storage.setItem("temperature", fahrenheit);
+         storage.setItem("windDirection", data.properties.windDirection.value);
+         storage.setItem("windChill", data.properties.windChill.value);
+         storage.setItem("currentWeather", data.properties.textDescription);
+         storage.setItem("windSpeed", data.properties.windSpeed);
+         const currentWeather = getcondition(data.properties.textDescription);
 
 
-// Get location code from API
-// function getCode(LOCALE) {
-//     const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
-//     const URL = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey='+API_KEY+'&q='+LOCALE;
-//     fetch(URL)
-//      .then(response => response.json())
-//      .then(function (data) {
-//       console.log('Json object from getCode function:');
-//       console.log(data);
-//       const locData = {}; // Create an empty object
-//       locData['key'] = data.Key; // Add the value to the object
-//       locData['name'] = data.LocalizedName;
-//       locData['postal'] = data.PrimaryPostalCode;
-//       locData['state'] = data.AdministrativeArea.LocalizedName;
-//       locData['stateAbbr'] = data.AdministrativeArea.ID;
-//       locData['geoposition'] = LOCALE;
-//       locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
-//       getWeather(locData);
-//       })
-//      .catch(error => console.log('There was a getCode error: ', error))
-//   } // end getCode function
-
-//   // Get Current Weather data from API
-// function getWeather(locData) {
-//     const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
-//     const CITY_CODE = locData['key']; // We're getting data out of the object
-//     const URL = "https://dataservice.accuweather.com/currentconditions/v1/"+CITY_CODE+"?apikey="+API_KEY+"&details=true";
-//     fetch(URL)
-//      .then(response => response.json())
-//      .then(function (data) {
-//       console.log('Json object from getWeather function:');
-//       console.log(data); // Let's see what we got back
-//       // Start collecting data and storing it
-//       locData['currentTemp'] = data[0].Temperature.Imperial.Value;
-//       locData['summary'] = data[0].WeatherText;
-//       locData['windSpeed'] = data[0].Wind.Speed.Imperial.Value;
-//       locData['windUnit'] = data[0].Wind.Speed.Imperial.Unit;
-//       locData['windDirection'] = data[0].Wind.Direction.Localized;
-//       locData['windGust'] = data[0].WindGust.Speed.Imperial.Value;
-//       locData['pastLow'] = data[0].TemperatureSummary.Past12HourRange.Minimum.Imperial.Value;
-//       locData['pastHigh'] = data[0].TemperatureSummary.Past12HourRange.Maximum.Imperial.Value;
-//       getHourly(locData); // Send data to getHourly function
-//       })
-//      .catch(error => console.log('There was an error: ', error))
-//   } // end getWeather function
-
-//   // Get next 12 hours of forecast data from API
-// function getHourly(locData) {
-//     const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
-//     const CITY_CODE = locData['key'];
-//     const URL = "https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"+CITY_CODE+"?apikey="+API_KEY;
-//     fetch(URL)
-//       .then(response => response.json())
-//       .then(function (data) {
-//       console.log('Json object from getHourly function:');
-//       console.log(data); // See what we got back
-//       // Get the first hour in the returned data
-//       let date_obj = new Date(data[0].DateTime);
-//       let nextHour = date_obj.getHours(); // returns 0 to 23
-//       // Store into the object
-//       locData["nextHour"] = nextHour;
-//       // Counter for the forecast hourly temps
-//       var i = 1;
-//       // Get the temps for the next 12 hours
-//       data.forEach(function (element) {
-//         let temp = element.Temperature.Value;
-//         let hour = 'hourTemp' + i;
-//         locData[hour] = temp; // Store hour and temp to object
-//         // New hiTemp variable, assign value from previous 12 hours
-//         let hiTemp = locData.pastHigh;
-//         // New lowTemp variable, assign value from previous 12 hours
-//         let lowTemp = locData.pastLow;
-//         // Check current forecast temp to see if it is 
-//         // higher or lower than previous hi or low
-//         if(temp > hiTemp){
-//           hiTemp = temp;
-//         } else if (temp < lowTemp){
-//           lowTemp = temp;
-//         }
-//         // Replace stored low hi and low temps if they changed
-//         if(hiTemp != locData.pastHigh){
-//           locData["pastHigh"] = hiTemp; // When done, this is today's high temp
-//         }
-//         if(lowTemp != locData.pastLow){
-//           locData["pastLow"] = lowTemp; // When done, this is today's low temp
-//         }
-//         i++; // Increase the counter by 1
-//       }); // ends the foreach method
-//       console.log('Finished locData object and data:');
-//       console.log(locData);
-//       buildPage(locData); // Send data to buildPage function
-//       })
-//       .catch(error => console.log('There was an error: ', error))
-//   } // end getHourly function
-
-//   function buildPage(locData){
-//     document.getElementById("state").innerHTML = locData['state'];
-//     document.getElementById("city").innerHTML = locData['name'];
-//     document.getElementById("zipcode").innerHTML = locData["postal"];
-//     document.getElementById("elevation").innerHTML = locData["elevation"];
-//     document.getElementById("latlong").innerHTML = locData["geoposition"];
-//     document.getElementById("temp1").innerHTML = locData["currentTemp"];
-//     document.getElementById("tempHigh").innerHTML = locData["pastHigh"];
-//     document.getElementById("tempLow").innerHTML = locData["pastLow"];
-//     document.getElementById("tempFl").innerHTML = locData["feelsLike"];
-//     document.getElementById("windSpeed").innerHTML = locData["WindSpeed"];
-//     document.getElementById("windDirec").innerHTML = locData["windDirection"];
-//     document.getElementById("hourly").innerHTML = locData["hourly"];
-//   }
-
-//   function getLocationByKey(cityKey) {
-//    const API_KEY = 'wq5DKQugZzjOI0UBCPVVfodQvLNgVXRs';
-//    const URL = 'https://dataservice.accuweather.com/locations/v1/'+cityKey+'?apikey='+API_KEY;
-//    fetch(URL)
-//     .then(response => response.json())
-//     .then(function (data) {
-//      console.log('Json object from getLocationByKey function:');
-//      console.log(data);
-//      const locData = {}; // Create an empty object
-//      locData['key'] = data.Key; // Add the value to the object
-//      locData['name'] = data.LocalizedName;
-//      locData['postal'] = data.PrimaryPostalCode;
-//      locData['state'] = data.AdministrativeArea.LocalizedName;
-//      locData['stateAbbr'] = data.AdministrativeArea.ID;
-//      let lat = data.GeoPosition.Latitude;
-//      let long = data.GeoPosition.Longitude;
-//      const LOCALE = lat+', '+long;
-//      locData['geoposition'] = LOCALE;
-//      locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
-//      getWeather(locData);
-//      })
-//     .catch(error => console.log('There was a getLocationByKey error: ', error))
-//    } // end getLocationByKey function
+         // Build the page for viewing 
+         buildPage();
+      })
+      .catch(error => console.log('There was a getWeather error: ', error))
+} // end getWeather function

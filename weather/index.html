@@ -1,93 +1,96 @@
 <!doctype html>
 <html lang="en-us">
- <head>
-  <meta charset="UTF-8">
-  <title>The Weather Site</title>
-  <meta name="description" content="Short Description of the page.">
-  <meta name="viewport" content="width=device-width">
-  <link href="/weather/css/screen3.css" rel="stylesheet" type="text/css" media="screen">
-  
- </head>
-<!-- Kendrick, Ben, Cam, Joe -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Weather Site</title>
+    <meta name="description" content="Short Description of the page.">
+    <meta name="viewport" content="width=device-width">
+    <link href="/weather/css/screen3.css" rel="stylesheet" type="text/css" media="screen">
+
+</head>
+<!-- Kendrick -->
 
 <!-- HEADER -->
-    <body>
-        <p id="status"></p>
 
+<body>
+    <p id="status"></p>
+    <main id="contentContainer" class="hide">
         <div id="general"></div>
         <header>
-                <h1 id="site-brand" class="bold">&#9748;The Weather Site</h1> 
+            <h1 id="site-brand" class="bold">&#9748;The Weather Site</h1>
         </header>
         <main>
-                <div id="location">
-                        <h1><span id="city"></span>, <span id="state"></span></h1>
-                        <p>
-                            <span id="zipcode"></span> | 
-                            <span id="elevation"></span> | 
-                            <span id="latlong"></span>
-                        </p>
-                    </div>
-    
+            <div id="location">
+                <h1><span id="city"></span>, <span id="state"></span></h1>
+                <p>
+                    <span id="zipcode"></span> |
+                    <span id="elevation"></span> |
+                    <span id="latlong"></span>
+                </p>
+            </div>
+
             <div id="curWeather">
                 <h3>Temperature</h3>
-                <section class="title" id="temps">       
-                <h3 id="temp1"></h3>
-                <h3 id="tempHigh"></h3>
-                <h3 id="tempLow"></h3>
-                <h3 id="tempFl"><span id="feels"></span></h3>
+                <section class="title" id="temps">
+                    <h3 id="temp1"></h3>
+                    <h3 id="tempHigh"></h3>
+                    <h3 id="tempLow"></h3>
+                    <h3 id="tempFl"><span id="feels"></span></h3>
                 </section>
-            
+
                 <section class="title" id="wind">
-                <div id="dial" class="ne"></div>
-                <h3 id="windSpeed"></h3>
-                <h3 id="windDirec"></h3>    
+                    <div id="dial" class="ne"></div>
+                    <h3 id="windSpeed"></h3>
+                    <h3 id="windDirec"></h3>
                 </section>
-    
+
                 <section id="title" class="title rain">
-                    
-                     <h3 id="currentWeather"></h3>
-                     
+
+                    <h3 id="currentWeather"></h3>
+
                 </section>
             </div>
-            </main>
-           <footer>
-                <h3>Hourly Forecast</h3>
-                <ul id="hourly">
-                     <li>0: 41&#8457;</li>
-                     <li>1: 41&#8457;</li>
-                     <li>2: 41&#8457;</li>
-                     <li>3: 41&#8457;</li>
-                     <li>4: 41&#8457;</li>
-                     <li>5: 41&#8457;</li>
-                     <li>6: 42&#8457;</li>
-                     <li>7: 44&#8457;</li>
-                     <li>8: 44&#8457;</li>
-                     <li>9: 46&#8457;</li>
-                     <li>10: 49&#8457;</li>
-                     <li>11: 51&#8457;</li>
-                     <li>12: 55&#8457;</li>
-                     <li>13: 58&#8457;</li>
-                     <li>14: 62&#8457;</li>
-                     <li>15: 64&#8457;</li>
-                     <li>16: 64&#8457;</li>
-                     <li>17: 62&#8457;</li>
-                     <li>18: 61&#8457;</li>
-                     <li>19: 60&#8457;</li>
-                     <li>20: 59&#8457;</li>
-                     <li>21: 58&#8457;</li>
-                     <li>22: 52&#8457;</li>
-                     <li>23: 48&#8457;</li>
-                </ul>
-           &copy;2018 The Weather Site
+        </main>
+        <footer>
+            <h3>Hourly Forecast</h3>
+            <ul id="hourly">
+                <li>0: 41&#8457;</li>
+                <li>1: 41&#8457;</li>
+                <li>2: 41&#8457;</li>
+                <li>3: 41&#8457;</li>
+                <li>4: 41&#8457;</li>
+                <li>5: 41&#8457;</li>
+                <li>6: 42&#8457;</li>
+                <li>7: 44&#8457;</li>
+                <li>8: 44&#8457;</li>
+                <li>9: 46&#8457;</li>
+                <li>10: 49&#8457;</li>
+                <li>11: 51&#8457;</li>
+                <li>12: 55&#8457;</li>
+                <li>13: 58&#8457;</li>
+                <li>14: 62&#8457;</li>
+                <li>15: 64&#8457;</li>
+                <li>16: 64&#8457;</li>
+                <li>17: 62&#8457;</li>
+                <li>18: 61&#8457;</li>
+                <li>19: 60&#8457;</li>
+                <li>20: 59&#8457;</li>
+                <li>21: 58&#8457;</li>
+                <li>22: 52&#8457;</li>
+                <li>23: 48&#8457;</li>
+            </ul>
+            &copy;2018 The Weather Site
         </footer>
-        
+
         <img src="images/AW_Black_Small.png" alt="company logo">
-        
+
         <script src="/weather/js/functions.js"></script>
         <script src="/weather/js/geo_loc.js"></script>
-        
-        </body>
-        </html>
-        
-          
-        </main>
+
+</body>
+
+</html>
+
+
+</main>
