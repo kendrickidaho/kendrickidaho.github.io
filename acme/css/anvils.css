@@ -1,0 +1,253 @@
+/* THis is the style sheet for the weather sit */
+
+/* Tabel of contents:
+1. Imports
+2. General Rules
+3. Mobile First Rules
+4. Larger Screen Rules */
+
+/* Section 1 - Imports */
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+@import url('https://fonts.google.com/specimen/Homemade+Apple');
+@import url('normalize.css');
+
+/* section 2 - General Rules */
+#page-head {
+    padding: 15px;
+    margin-left: 15px;
+    background-color: #ffffff;
+    width: 95%;
+    height: 5%;
+}
+
+#all{
+    background-color: #ffffff;
+    margin: 15px;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    /* flex-flow: wrap; */
+}
+
+#information{
+    overflow: hidden;
+    justify-content: flex-end;
+}
+
+#path img{
+    width: 50%;
+    float: left;
+
+}
+
+#heading {
+    font-size: 30px;
+    margin: 0px;
+    align-self: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+#logo {
+    justify-content: flex-start;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin: 3px;
+    width: 50%;
+    height: 5%;
+    background-color: #ffffff;
+}
+
+#bodies li{
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+    #picture {
+        /*	width: 50%;*/
+        display: flex;
+            height: 300px;
+        }
+/* 
+#tile{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+
+
+#information{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: wrap;
+    } */
+
+#head2{
+    padding-left: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sansita', sans-serif;
+}
+
+#nav_bar{
+    display: flex;
+    background-color: #de2226;
+}
+
+#nav_bar ul{
+    display:flex;
+    color: #FFFFFF;
+    font-size: 13px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-grow: 1;
+    padding: 0;
+    
+}
+
+#nav_bar a:hover {
+    background-color: #0458f3;
+}
+
+#nav_bar a{
+    display:flex;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+
+body {
+    /* font-size:1.5em; same as font-size: 18px */
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+
+}
+
+#bodies {
+    background-image: url("/acme/images/site/background.jpg");
+    background-size: cover;
+    margin: .2em auto;
+    font-display: "acme";
+}
+
+#page-main {
+    background-color: #ffffff;
+    height: 10%;
+}
+
+hr {
+    height: 3px;
+    background-color: #000000;
+}
+
+footer {
+    background-color: #ffffff;
+    height: 10%;
+}
+
+/* Section 3 -Mobile First Rules */
+
+#page-head {
+    padding: 15px;
+    margin-left: 15px;
+    background-color: #ffffff;
+    width: 95%;
+    height: 5%;
+}
+
+
+#logo {
+    justify-content: flex-start;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin: 3px;
+    width: 80%;
+    height: 5%;
+    /* background-color: #ffffff; */
+}
+
+footer {
+    margin-bottom: 60px;
+}
+
+li {
+    list-style: none;
+}
+
+/* Section 4 - Larger Screens */
+@media screen AND (min-width: 700px) {
+
+    nav {
+        position: relative;
+        width: 100%;
+        /* bottom: 0;
+    left: 0; */
+        background-color: #de2226;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0%;
+        margin: 0px;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav {
+        width: 100%;
+        background-color: #de2226;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0%;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    /* >>>>>>> f80d0e3220d2a52ded45e9561f70eed9ebf2603a */
+}
